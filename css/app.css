@@ -193,6 +193,7 @@ span.highlight {
   position: relative;
   top: 0;
   left: 0;
+  clip-path: inset(1px 1px);
 }
 
 .videoMerge {
