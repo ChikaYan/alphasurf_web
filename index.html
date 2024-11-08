@@ -88,6 +88,12 @@
                             <br>Unity
                         </td>
                         <td>
+                            <a style="text-decoration:none" href="https://jiankangdeng.github.io/">
+                                Jiankang Deng
+                            </a>
+                            <br>Imperial College London
+                        </td>
+                        <td>
                             <a style="text-decoration:none" href="https://www.cl.cam.ac.uk/~aco41/">
                                 Cengiz Oztireli
                             </a>
@@ -112,19 +118,19 @@
                                 <h4><strong>Paper (arixv)</strong></h4>
                             </a>
                         </li> 
-                        <!-- <li>
-                            <a href="">
+                        <li>
+                            <a href="https://drive.google.com/file/d/10OvhfGj9P4t5esdy9NTriBWm-jKE2n8w/view?usp=sharing">
                             <img src="./img/data_icon.webp" height="90px">
                                 <h4><strong>Data</strong></h4>
                             </a>
-                        </li> -->
-                        <li>
+                        </li>
+                        <!-- <li>
                             <a href="">
                             <img src="./img/github_icon.svg" height="90px">
                                 <h4><strong>Code</strong></h4>
                                 Coming Soon
                             </a>
-                        </li>
+                        </li> -->
                         <!-- <li>
                             <a href="">
                             <img src="./img/youtube_icon.png" height="90px">
@@ -157,6 +163,22 @@
                     <div>
                         <video id="editing-materials" width="100%" playsinline autoplay loop muted style="padding-top: 10px; clip-path: inset(1px 1px);">
                             <source src="video/circle.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <!-- Please search on arxiv for an unanonymized version of the paper and supplementary. -->
+
+                
+                <table width="100%">
+                    <div>
+                        <video id="editing-materials" width="100%" playsinline autoplay loop muted style="padding-top: 10px; clip-path: inset(1px 1px);">
+                            <source src="video/circle_trans.mp4" type="video/mp4" />
                         </video>
                     </div>
                 </table>
@@ -201,12 +223,17 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    Implicit surface representations such as the signed distance function (SDF) have emerged as a promising approach for image-based surface reconstruction. However, existing optimization methods assume solid surfaces and are therefore unable to properly reconstruct semi-transparent surfaces and thin structures, which also exhibit low opacity due to the blending effect with the background. While neural radiance field (NeRF) based methods can model semi-transparency and achieve photo-realistic quality in synthesized novel views, their volumetric geometry representation tightly couples geometry and opacity, and therefore cannot be easily converted into surfaces without introducing artifacts. We present &alpha;Surf, a novel surface representation with decoupled geometry and opacity for the reconstruction of semi-transparent and thin surfaces where the colors mix. Ray-surface intersections on our representation can be found in closed-form via analytical solutions of cubic polynomials, avoiding Monte-Carlo sampling and is fully differentiable by construction. Our qualitative and quantitative evaluations show that our approach can accurately reconstruct surfaces with semi-transparent and thin parts with fewer artifacts, achieving better reconstruction quality than state-of-the-art SDF and NeRF methods.
+                    Implicit surface representations such as the signed distance function (SDF) have emerged as a promising approach for image-based surface reconstruction. 
+                    However, existing optimization methods assume opaque surfaces 
+                    and therefore cannot properly reconstruct translucent surfaces and sub-pixel thin structures, which also exhibit low opacity due to the blending effect.
+                    While neural radiance field (NeRF) based methods can model semi-transparency and synthesize novel views with photo-realistic quality, their volumetric representation tightly couples geometry (surface occupancy) and material property (surface opacity), and therefore cannot be easily converted into surfaces without introducing artifacts.  
+                    We present &alpha;Surf, a novel scene representation with decoupled geometry and opacity for the reconstruction of surfaces with translucent or blending effects. Ray-surface intersections on our representation can be found in closed-form via analytical solutions of cubic polynomials, avoiding Monte-Carlo sampling, and are fully differentiable by construction.
+                    Our qualitative and quantitative evaluations show that our approach can accurately reconstruct translucent and extremely thin surfaces, achieving better reconstruction quality than state-of-the-art SDF and NeRF methods.
                 </p>
             </div>
         </div>
 
-        <image src="img/method.png" class="img-responsive" alt="overview" width="70%" style="max-height: 450px;margin:auto;">
+        <image src="img/method.png" class="img-responsive" alt="overview" width="95%" style="max-height: 450px;margin:auto;">
 
 
 
@@ -226,7 +253,7 @@
                     </div>
                     
                     <table width="100%">
-                        <image src="img/teaser.png" class="img-responsive" alt="overview" width="60%" style="margin:auto;"></image>
+                        <image src="img/teaser.png" class="img-responsive" alt="overview" width="80%" style="margin:auto;"></image>
                     </table>
     
                 </div>
